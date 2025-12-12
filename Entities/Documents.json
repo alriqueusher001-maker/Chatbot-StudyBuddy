@@ -1,0 +1,41 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Document title or filename"
+    },
+    "original_file_url": {
+      "type": "string",
+      "description": "URL of the uploaded file"
+    },
+    "extracted_text": {
+      "type": "string",
+      "description": "OCR extracted text from the document"
+    },
+    "file_type": {
+      "type": "string",
+      "enum": [
+        "pdf",
+        "image",
+        "doc"
+      ],
+      "description": "Type of uploaded file"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "processing",
+        "completed",
+        "failed"
+      ],
+      "default": "processing",
+      "description": "Processing status of the document"
+    }
+  },
+  "required": [
+    "title",
+    "original_file_url"
+  ]
+}

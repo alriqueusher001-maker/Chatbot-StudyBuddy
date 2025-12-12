@@ -1,0 +1,28 @@
+{
+  "name": "Question",
+  "type": "object",
+  "properties": {
+    "question_text": {
+      "type": "string",
+      "description": "The user's question"
+    },
+    "context_used": {
+      "type": "string",
+      "description": "Retrieved context from documents used to answer"
+    },
+    "ai_answer": {
+      "type": "string",
+      "description": "AI generated answer"
+    },
+    "document_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of documents used for context"
+    }
+  },
+  "required": [
+    "question_text"
+  ]
+}
